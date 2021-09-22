@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../Store/etc/config.xsd">
+    <default>
+        <sales>
+            <customexport>
+                <active>1</active>
+                <customoptions>PhoneNumber,Comments,Sku</customoptions>
+            </customexport>
+        </sales>
+    </default>
+</config>

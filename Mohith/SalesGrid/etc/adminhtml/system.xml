@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="sales">
+            <group id="customexport" translate="label" sortOrder="100" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
+                <label>Custom Export Options</label>
+                <field id="active" translate="label comment" sortOrder="10" type="select" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="customoptions" translate="label" type="multiselect" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1">
+                    <depends>
+                        <field id="*/*/active">1</field>
+                    </depends>
+                    <label>Custom Options</label>
+                    <source_model>Mohith\SalesGrid\Model\Config\Source\ConfigOption</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
